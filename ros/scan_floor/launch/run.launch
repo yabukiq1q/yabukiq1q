@@ -1,0 +1,14 @@
+<launch> 
+  <rosparam file = "$(find scan_floor)/config/params.yaml" command = "load"/>
+  <node name="serial" pkg="scan_floor" type="serial" output="screen"/>
+  <node name="autonomous_navigation" pkg="scan_floor" type="autonomous_navigation" output="screen"/>
+  <node name="pubodom"               pkg="scan_floor" type="pubsubOdom"/>
+  
+  <!--
+  <arg name="rviz_flag" default="true"/>
+  <group if="$(arg rviz_flag)">
+    <arg name="rvizconfig" default="$(find yura_yabu)/rviz/debug.rviz"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rvizconfig)"/>
+  </group>
+  -->
+</launch>

@@ -1,0 +1,12 @@
+serialCommunication:
+  #ポート名
+  serialPortName: "/dev/serial/by-id/usb-ROBOTIS_OpenCR_Virtual_ComPort_in_FS_Mode_FFFFFFFEFFFF-if00"
+  #ボーレート
+  baudrate: 115200
+  #シリアルを受け取る間隔(プログラムの周期)
+  readInterval: 0.02
+  #ゲイン
+  #gain:
+
+autonomousNavigation:
+  pathName: "/home/ubuntu/scanfloor_ws/src/scan_floor/config/target.csv"

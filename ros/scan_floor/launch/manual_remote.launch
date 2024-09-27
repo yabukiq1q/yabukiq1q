@@ -1,0 +1,6 @@
+<launch> 
+  <rosparam file = "$(find scan_floor)/config/params.yaml" command = "load"/>
+  <node name="serial" pkg="scan_floor" type="serial" output="screen"/>
+  <node name="joy2cmd_vel" pkg="scan_floor" type="joy2cmd_vel"/>
+  <!-- <node name="pubOdom"     pkg="scan_floor" type="pubsubOdom" /> -->
+</launch>
